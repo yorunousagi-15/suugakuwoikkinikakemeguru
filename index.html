@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="中学数学から高校数学、大学数学までをつなげて学ぶ数学教材サイト。" />
+  <title>数学航路 — 中学・高校・大学数学</title>
+  <link rel="icon" href="math-logo.svg" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <header class="topbar">
+      <a class="brand" href="#/" aria-label="数学航路 ホーム">
+        <img src="math-logo.svg" alt="" class="brand-logo" />
+        <span class="brand-text"><span>数学航路</span><em>Mathematics, connected.</em></span>
+      </a>
+      <nav class="topnav" aria-label="主要メニュー">
+        <a href="#/">ホーム</a>
+        <a href="#/middle">中学</a>
+        <a href="#/high">高校</a>
+        <a href="#/university">大学</a>
+        <a href="#/practice">演習</a>
+      </nav>
+      <div class="actions">
+        <button class="icon-btn" id="searchButton" title="検索" aria-label="検索">⌕</button>
+        <button class="icon-btn" id="themeButton" title="ライト/ダーク切替" aria-label="ライト/ダーク切替">◐</button>
+        <button class="icon-btn mobile-only" id="menuButton" title="メニュー" aria-label="メニュー">☰</button>
+      </div>
+    </header>
+
+    <div class="search-panel" id="searchPanel" hidden>
+      <div class="search-box-wrap">
+        <input id="searchInput" type="search" placeholder="数学の記事を検索…" autocomplete="off" />
+        <kbd>ESC</kbd>
+      </div>
+      <div id="searchResults" class="search-results"></div>
+    </div>
+
+    <div class="page-shell">
+      <aside class="sidebar" id="sidebar" aria-label="サイトメニュー">
+        <div class="sidebar-label">LEARNING PATH</div>
+        <section>
+          <div class="side-title">中学数学</div>
+          <a href="#/middle">中学数学の地図</a>
+          <a href="#/middle-number-algebra">数と式</a>
+          <a href="#/middle-linear">一次関数</a>
+          <a href="#/middle-geometry">図形と証明</a>
+        </section>
+        <section>
+          <div class="side-title">高校数学</div>
+          <a href="#/high">高校数学の地図</a>
+          <a href="#/high-quadratic">二次関数</a>
+          <a href="#/high-trig">三角関数</a>
+          <a href="#/high-calculus">微分と積分</a>
+          <a href="#/high-probability">確率と統計</a>
+        </section>
+        <section>
+          <div class="side-title">大学数学</div>
+          <a href="#/university">大学数学の地図</a>
+          <a href="#/university-linear">線形代数</a>
+          <a href="#/university-multi">多変数微積分</a>
+          <a href="#/university-analysis">解析の入り口</a>
+        </section>
+        <section>
+          <div class="side-title">演習</div>
+          <a href="#/practice">演習室</a>
+        </section>
+        <div class="side-note">draw it → name it → prove it</div>
+      </aside>
+
+      <main class="content" id="content"></main>
+
+      <aside class="outline" id="outline" aria-label="このページの目次">
+        <div class="outline-title">このページの目次</div>
+        <nav id="outlineNav"></nav>
+      </aside>
+    </div>
+
+    <footer class="footer">
+      <div>数学航路</div>
+      <div class="footer-note">公式を覚える。その先で、公式がなぜ生まれるかを見る。</div>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
